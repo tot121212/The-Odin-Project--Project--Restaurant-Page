@@ -1,21 +1,48 @@
 nav{
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0px;
 }
 
 body{
-    background-color: lightsalmon;
+    background-image: url("https://cdn.pixabay.com/photo/2021/12/12/22/17/red-squirrel-6867105_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-body, #home, #menu, #about{
-    padding: 8px;
-}
-
 #home, #menu, #about{
+    padding: 8px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    gap: 12px;
+}
+
+#home{
+    align-items: flex-start;
+}
+
+nav, #menu, #about{
+    align-items: flex-end;
+}
+
+#content header{
+    font-size: xx-large;
+}
+
+body > header, #content > * {
+    background-color: aliceblue;
+    padding: 16px;
+    mix-blend-mode: multiply;
+}
+
+#home header{
+    padding: 0px 16px;
+    border-bottom: 1px solid black;
+    border-radius: 8px;
 }
