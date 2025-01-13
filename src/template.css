@@ -1,0 +1,14 @@
+nav{
+    text-align: center;
+}
+
+body{
+    background-color: lightsalmon;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+body, #home, #menu, #about{
+    padding: 8px;
+}
