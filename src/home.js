@@ -5,18 +5,20 @@ export const loadHome = ()=>{
 
     const header = document.createElement("header");
     homeDiv.appendChild(header);
+    header.classList.add("playwrite-vn-300");
     header.innerHTML += `
-        <div>
+        <p>
             CS Delicatessen
-        </div>
+        </p>
     `;
 
     const main = document.createElement("main");
     homeDiv.appendChild(main);
     main.innerHTML = `
-        <div>
-            We pride ourselves on the best quality squirrel meat available. Locally sourced, right here in Gootown!
-        </div>
+        <p>
+            We pride ourselves on the best quality <b><i>squirrel meat</i></b> available. <br>
+            Locally sourced, right here in Gootown! <br>
+        </p>
     `;
 
     document.querySelector("div#content").appendChild(homeDiv);

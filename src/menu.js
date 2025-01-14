@@ -5,19 +5,17 @@ export const loadMenu = ()=>{
 
     const header = document.createElement("header");
     menuDiv.appendChild(header);
+    header.classList.add("playwrite-vn-300");
     header.innerHTML = `
-        <div>
-            Here are our current menu items:
-        </div>
+        <p>
+            Menu
+        </p>
     `;
 
     const main = document.createElement("main");
     menuDiv.appendChild(main);
-    main.innerHTML = `
-        <div>
-            Placeholder
-        </div>
-    `;
+    main.innerHTML = ``;
+    main.style.display = "none";
 
     const footer = document.createElement("footer");
     menuDiv.appendChild(footer);

@@ -8,7 +8,7 @@ import { loadMenu } from "./menu.js";
 import { loadAbout } from "./about.js";
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("rubik-font")
+    document.body.classList.add("rubik-300");
     addFonts();
     loadHome();
     document.querySelector("nav").addEventListener("click", (event)=>{

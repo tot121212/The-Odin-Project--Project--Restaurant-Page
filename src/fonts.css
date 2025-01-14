@@ -1,6 +1,13 @@
-.rubik-font {
+.rubik-300 {
     font-family: "Rubik", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+}
+
+.playwrite-vn-300 {
+  font-family: "Playwrite VN", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
