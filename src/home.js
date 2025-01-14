@@ -16,8 +16,13 @@ export const loadHome = ()=>{
     homeDiv.appendChild(main);
     main.innerHTML = `
         <p>
-            We pride ourselves on the best quality <b><i>squirrel meat</i></b> available. <br>
-            Locally sourced, right here in Gootown! <br>
+            CS Delicatessen prides itself in ensuring that our products are fresh. <br>
+        </p>
+        <p>
+            We have the best quality <i class="nowrap">squirrel meat</i> available. <br>
+        </p>
+        <p>
+            Locally sourced, right here in <b>Gootown</b>! <br>
         </p>
     `;
 

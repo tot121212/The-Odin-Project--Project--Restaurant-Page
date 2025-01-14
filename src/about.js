@@ -16,8 +16,9 @@ export const loadAbout = ()=>{
     aboutDiv.appendChild(main);
     main.innerHTML = `
         <p>
-            Locally owned and operated in Gootown, <br>
-            We have been serving squirrel since 6528! <br>
+            Locally owned and operated in <b>Gootown</b>, We have been serving squirrel since 6528! <br>
+        </p>
+        <p>
             Rest assured, our meat is of the highest quality...
         </p>
     `

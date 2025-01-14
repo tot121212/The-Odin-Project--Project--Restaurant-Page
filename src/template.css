@@ -1,38 +1,76 @@
 :root{
     --squirrel-brown: 101, 63, 51;
-    --wood-grey: 47, 46, 42;
-    --moss-green: 113, 127, 99;
+    --wood-grey: 58, 56, 51;
+    --moss-green: 113, 133, 99;
+}
+
+::placeholder{
+    color: rgba(var(--wood-grey), 0.8);
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+.gradient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at right, rgba(var(--moss-green), 1), rgba(var(--moss-green), 0.3));
+    z-index: 0;
 }
 
 body{
+    background-color: lightgray;
+
     background-image: url("https://cdn.pixabay.com/photo/2021/12/12/22/17/red-squirrel-6867105_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    background-blend-mode: multiply;
+    
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 5fr;
 }
 
+#content{
+    grid-column: 1/2;
+    grid-row: 2/-1;
+}
+
+body > header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+
 nav{
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 32px;
     position: relative;
     top: 0px;
-    padding: 12px;
 }
 
-nav button {
+nav button{
     padding: 0px 16px;
-    font-size: xx-large;
-    border-radius: 8px;
+    font-size: x-large;
+    
     color: rgb(var(--squirrel-brown));
     background-color: transparent;
+
     border: 1px dotted rgb(var(--wood-grey));
-    
+    border-radius: 8px;
+}
+
+nav button, #content form input{
     font-family: "Playwrite VN", serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -40,7 +78,6 @@ nav button {
 }
 
 #home, #menu, #about{
-    padding: 8px;
     border-radius: 12px;
 
     display: flex;
@@ -52,8 +89,8 @@ nav button {
     align-items: center;
 }
 
-#content > * {
-    margin: 24px;
+#content > * > *{
+    max-width: 70%;
 }
 
 #content header{
@@ -75,10 +112,25 @@ nav button {
     padding: 8px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 16px;
 }
 
-body > header, #content > * {
-    padding: 16px;
-    background: radial-gradient(circle at center, rgba(var(--moss-green), 0.9), rgba(var(--moss-green), 0));
+#content form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
 }
+
+#content form input{
+    background-color: rgb(var(--moss-green));
+    height: 3rem;
+    text-align: center;
+}
+
+body > header, body > #content{
+    padding: 16px;
+    background: radial-gradient(circle at right, rgba(var(--moss-green), 1), rgba(var(--moss-green), 0.3));
+    border-bottom: 2px solid rgba(var(--squirrel-brown), 0.2);
+}
+

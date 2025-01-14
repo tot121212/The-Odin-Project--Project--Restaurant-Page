@@ -14,17 +14,17 @@ export const loadMenu = ()=>{
 
     const main = document.createElement("main");
     menuDiv.appendChild(main);
-    main.innerHTML = ``;
-    main.style.display = "none";
-
-    const footer = document.createElement("footer");
-    menuDiv.appendChild(footer);
-    footer.innerHTML = `
+    main.innerHTML = `
         <form action="" method="get" id="purchase-form">
             <label for="purchase-amount">How many squirrels would you like?</label>
             <input id="purchase-amount" type="text" placeholder="#">
         </form>
     `;
+
+    const footer = document.createElement("footer");
+    menuDiv.appendChild(footer);
+    footer.style.display = "none";
+    
 
     document.querySelector("div#content").appendChild(menuDiv);
 
